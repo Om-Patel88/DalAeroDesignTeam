@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalhousie Aero Design Team</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles based on your logo colors */
+        :root {
+            --dal-blue: #0033A0; /* Royal Blue */
+            --dal-yellow: #FFC72A; /* Bright Yellow */
+            --dal-black: #1A1A1A;
+        }
+
+        .bg-dal-blue { background-color: var(--dal-blue); }
+        .text-dal-blue { color: var(--dal-blue); }
+        .bg-dal-yellow { background-color: var(--dal-yellow); }
+        .text-dal-yellow { color: var(--dal-yellow); }
+
+        /* Use Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: var(--dal-black);
+        }
+
+        /* Hero text shadow for better visibility on images */
+        .hero-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        /* Custom image placeholder for the logo */
+        .logo-placeholder {
+            /* Using the filename provided by the user for the logo */
+            content: url('uploaded:LogoExport12.png-a4ec5f97-0529-48e3-9133-c7a488164f7f');
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Smooth scroll for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dal-blue': '#0033A0',
+                        'dal-yellow': '#FFC72A',
+                        'dal-black': '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Navigation Bar -->
+    <header class="bg-dal-blue text-white shadow-lg fixed w-full z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- LOGO IN NAV BAR -->
+                <img src="./dal aero logo.png" alt="Dal Aero Design Logo" class="h-8 w-8 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/40x40/0033A0/FFC72A?text=DAL+AERO';" />
+                <span class="text-xl font-bold tracking-tight">DALHOUSIE AERO DESIGN</span>
+            </div>
+            <div class="hidden md:flex space-x-6 font-semibold">
+                <a href="#mission" class="hover:text-dal-yellow transition duration-300">Mission</a>
+                <a href="#join" class="hover:text-dal-yellow transition duration-300">Join Us</a>
+                <a href="#sponsors" class="hover:text-dal-yellow transition duration-300">Sponsor</a>
+                <a href="#contact" class="hover:text-dal-yellow transition duration-300">Connect</a>
+            </div>
+            <!-- Mobile Menu Button (Omitted for simplicity, but good practice for a real site) -->
+        </nav>
+    </header>
+
+    <main class="pt-16">
+        
+        <!-- 1. Hero Section - Updated with new slogan and prominent Dal Blue background -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-dal-blue">
+            
+            <div class="relative z-10 p-8 max-w-4xl mx-auto">
+                
+                <!-- LOGO DISPLAYED PROMINENTLY IN HERO SECTION (The area you selected) -->
+                <img src="./LogoExport12.png" alt="Dal Aero Design Logo" class="h-40 w-40 mx-auto mb-6 rounded-full shadow-2xl" onerror="this.onerror=null; this.src='https://placehold.co/160x160/0033A0/FFC72A?text=DAL+AERO';" />
+
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white hero-shadow tracking-tight uppercase">
+                    FROM BLUEPRINT TO RUNWAY
+                </h1>
+                <p class="mt-4 text-2xl sm:text-3xl text-dal-yellow font-light hero-shadow">
+                    STUDENT-BUILT AIRCRAFT
+                </p>
+                <p class="mt-2 text-xl text-white font-semibold">
+                    Dalhousie Aero Design Team | Engineering Tomorrow's Flight
+                </p>
+                <a href="#join" class="mt-10 inline-block bg-dal-yellow text-dal-blue font-bold py-3 px-8 rounded-full text-lg shadow-2xl hover:bg-white transition duration-300 transform hover:scale-105 uppercase tracking-wider">
+                    JOIN THE TEAM
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Our Mission Section -->
+        <section id="mission" class="py-16 md:py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-dal-blue border-b-4 border-dal-yellow inline-block pb-1">
+                        Our Mission: SAE Aero Design 2027
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        We are a student-run team from Dalhousie University, NS, Canada.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h3 class="text-2xl font-bold text-dal-black mb-4">What We Do</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Founded in Summer 2025, our goal is to create new opportunities in aerospace engineering and hands-on design innovation at Dalhousie. We are preparing to compete in the prestigious **SAE Aero Design Competition in 2027**.
+                        </p>
+                        <ul class="mt-6 space-y-3 text-lg text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-dal-yellow mr-3 text-2xl font-bold">&rarr;</span>
+                                <span class="font-semibold text-dal-blue">Design:</span> Conceiving the optimal aircraft structure and system.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-dal-yellow mr-3 text-2xl font-bold">&rarr;</span>
+                                <span class="font-semibold text-dal-blue">Build:</span> Fabricating a flight-ready, radio-controlled aircraft from scratch.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-dal-yellow mr-3 text-2xl font-bold">&rarr;</span>
+                                <span class="font-semibold text-dal-blue">Test & Fly:</span> Validating performance against real-world mission requirements.
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-dal-yellow">
+                        <h3 class="text-2xl font-bold text-dal-black mb-4 flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-dal-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            The Challenge: Regular Class
+                        </h3>
+                        <p class="text-gray-700">
+                            We are focused on the Regular Class, which challenges us to develop a fundamental understanding of flight and structural efficiency.
+                        </p>
+                        <p class="mt-3 font-semibold text-dal-blue">The primary objective is simple:</p>
+                        <p class="text-2xl font-extrabold mt-1 text-dal-black">
+                            Maximize Payload, Minimize Weight.
+                        </p>
+                        <p class="text-sm mt-3 text-gray-500">
+                            This experience prepares the next generation of engineers for careers in aerospace and beyond.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Why Join? Section -->
+        <section id="join" class="py-16 md:py-24 bg-dal-blue text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-dal-yellow border-b-4 border-white inline-block pb-1">
+                        Ready to Build the Future?
+                    </h2>
+                    <p class="mt-4 text-xl font-light">
+                        We're looking for passionate students from **ALL** disciplines and years.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <div class="p-6 bg-dal-black rounded-xl shadow-xl hover:shadow-dal-yellow transition duration-300">
+                        <h3 class="text-xl font-bold text-dal-yellow mb-3">Gain Real-World Skills</h3>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li>Aircraft Design & Build Skills</li>
+                            <li>Aerodynamics & Flight Principles</li>
+                            <li>Advanced Manufacturing (Composites, 3D Printing)</li>
+                            <li>Competition Experience</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-6 bg-dal-black rounded-xl shadow-xl hover:shadow-dal-yellow transition duration-300">
+                        <h3 class="text-xl font-bold text-dal-yellow mb-3">Learn By Doing</h3>
+                        <p class="text-lg">
+                            Move beyond the textbook. We offer hands-on experience in every step of the engineering process, from initial concept sketches to final flight testing. It's the best way to prepare for an industry career.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-dal-black rounded-xl shadow-xl hover:shadow-dal-yellow transition duration-300">
+                        <h3 class="text-xl font-bold text-dal-yellow mb-3">All Majors Welcome</h3>
+                        <p class="text-lg">
+                            This team needs more than just engineers! We rely on skills from all fields:
+                        </p>
+                        <p class="text-sm mt-2 text-gray-400 font-semibold">
+                            Project Management, Marketing, Finance, Technical Writing, and Electrical/Software work.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="mailto:contact@dalahouiseaero.ca" class="inline-block bg-dal-yellow text-dal-blue font-bold py-4 px-10 rounded-full text-xl shadow-2xl hover:bg-white transition duration-300 transform hover:scale-105">
+                        <svg class="w-6 h-6 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        Apply Today
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sponsorship Section -->
+        <section id="sponsors" class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-dal-blue border-b-4 border-dal-yellow inline-block pb-1">
+                        Partner With Us
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
+                        Your support is crucial for our success at the SAE Aero Design Competition. Help us reach our **$6000 budget** goal!
+                    </p>
+                </div>
+
+                <blockquote class="text-center italic text-xl text-gray-700 mb-10 p-4 border-l-4 border-dal-blue bg-white rounded-lg shadow-md max-w-3xl mx-auto">
+                    "Sponsorship is your chance to be associated with the current & future successes of Dalhousie University at an International level. The skies await!"
+                </blockquote>
+
+                <!-- Budget Breakdown and Sponsorship Tiers (Based on image_f92cc5.jpg) -->
+                <div class="grid lg:grid-cols-2 gap-10">
+                    
+                    <!-- Budget Breakdown (Simplified Text) -->
+                    <div class="p-6 bg-white rounded-xl shadow-2xl border-t-8 border-dal-yellow">
+                        <h3 class="text-2xl font-bold text-dal-black mb-4">Where Your Money Goes</h3>
+                        <ul class="space-y-3 text-lg text-gray-700">
+                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">Flight Electronics</span><span class="font-bold text-dal-black">~27%</span></li>
+                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">SAE Fees & Registration</span><span class="font-bold text-dal-black">~43%</span></li>
+                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">Prototyping & Materials</span><span class="font-bold text-dal-black">~11%</span></li>
+                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">Advertising & Misc.</span><span class="font-bold text-dal-black">~19%</span></li>
+                        </ul>
+                        <p class="mt-4 text-sm text-gray-500">
+                            Detailed breakdown is available in our Sponsor Package.
+                        </p>
+                    </div>
+
+                    <!-- Sponsorship Tiers -->
+                    <div class="p-6 bg-dal-blue text-white rounded-xl shadow-2xl">
+                        <h3 class="text-2xl font-bold text-dal-yellow mb-4">Sponsorship Tiers</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-700">
+                                <thead>
+                                    <tr class="text-left text-sm font-medium uppercase tracking-wider">
+                                        <th class="py-3 px-2">Exposure</th>
+                                        <th class="py-3 px-2 bg-dal-yellow text-dal-blue rounded-tl-lg">Platinum ($3000+)</th>
+                                        <th class="py-3 px-2 bg-blue-400 text-dal-black">First Class ($2000+)</th>
+                                        <th class="py-3 px-2 bg-gray-700 text-white rounded-tr-lg">Business ($1000+)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-800">
+                                    <tr class="hover:bg-dal-black">
+                                        <td class="py-2 px-2 font-semibold">Company logo on Vehicle</td>
+                                        <td class="py-2 px-2 text-dal-yellow">&#10003;</td>
+                                        <td class="py-2 px-2 text-blue-400">&#10003;</td>
+                                        <td class="py-2 px-2 text-gray-400">&#10003;</td>
+                                    </tr>
+                                    <tr class="hover:bg-dal-black">
+                                        <td class="py-2 px-2 font-semibold">Team Website Mention</td>
+                                        <td class="py-2 px-2 text-dal-yellow">&#10003;</td>
+                                        <td class="py-2 px-2 text-blue-400">&#10003;</td>
+                                        <td class="py-2 px-2 text-gray-400">&#10003;</td>
+                                    </tr>
+                                    <tr class="hover:bg-dal-black">
+                                        <td class="py-2 px-2 font-semibold">Logo on Team Apparel</td>
+                                        <td class="py-2 px-2 text-dal-yellow">&#10003;</td>
+                                        <td class="py-2 px-2 text-blue-400">&#10003;</td>
+                                        <td class="py-2 px-2 text-gray-400"></td>
+                                    </tr>
+                                    <tr class="hover:bg-dal-black">
+                                        <td class="py-2 px-2 font-semibold">Team Banner Display</td>
+                                        <td class="py-2 px-2 text-dal-yellow">&#10003;</td>
+                                        <td class="py-2 px-2 text-blue-400">&#10003;</td>
+                                        <td class="py-2 px-2 text-gray-400"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="mailto:sponsorship@dalahouiseaero.ca" class="mt-6 block w-full text-center bg-dal-yellow text-dal-blue font-bold py-3 rounded-lg hover:bg-white transition duration-300">
+                            Request Sponsor Package
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact / Footer -->
+        <footer id="contact" class="bg-dal-black text-white py-12">
+            <!-- Changed grid to md:grid-cols-2 and removed the social media column -->
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 text-center md:text-left">
+                
+                <!-- Contact Info (Now includes Instagram) -->
+                <div>
+                    <h4 class="text-xl font-bold text-dal-yellow mb-4">Get In Touch</h4>
+                    <p class="text-gray-400">Email (General): <a href="mailto:contact@dalahouiseaero.ca" class="hover:text-white">contact@dalahouiseaero.ca</a></p>
+                    <p class="text-gray-400">Email (Sponsorship): <a href="mailto:sponsorship@dalahouiseaero.ca" class="hover:text-white">sponsorship@dalahouiseaero.ca</a></p>
+                    
+                    <h5 class="text-lg font-bold text-dal-yellow mt-4 mb-2">Student Executives</h5>
+                    <p class="text-gray-400">Mithil Jha (Co-manager): <a href="mailto:mithil.jha@dal.ca" class="hover:text-white">mithil.jha@dal.ca</a></p>
+                    <p class="text-gray-400">Zachary Fraser (Co-manager): <a href="mailto:zach.fraser@dal.ca" class="hover:text-white">zach.fraser@dal.ca</a></p>
+
+                    <!-- New Instagram Link -->
+                    <h5 class="text-lg font-bold text-dal-yellow mt-4 mb-2">Follow Us</h5>
+                    <a href="https://www.instagram.com/dalaerodesign/" target="_blank" class="inline-flex items-center text-gray-400 hover:text-white transition duration-300">
+                        <!-- Instagram icon using inline SVG for cleanliness -->
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.013 4.851.074 1.341.066 2.221.328 3.016.634.804.305 1.488.718 2.164 1.396.678.678 1.092 1.362 1.396 2.164.306.795.568 1.675.634 3.016.061 1.267.074 1.647.074 4.851s-.013 3.584-.074 4.851c-.066 1.341-.328 2.221-.634 3.016-.305.804-.718 1.488-1.396 2.164-.678.678-1.362 1.092-2.164 1.396-.795.306-1.675.568-3.016.634-1.267.061-1.647.074-4.851.074s-3.584-.013-4.851-.074c-1.341-.066-2.221-.328-3.016-.634-.804-.305-1.488-.718-2.164-1.396-.678-.678-1.362-1.092-1.396-2.164-.306-.795-.568-1.675-.634-3.016-.061-1.267-.074-1.647-.074-4.851s.013-3.563.074-4.851c.066-1.341.328-2.221.634-3.016.305-.804.718-1.488 1.396-2.164.678-.678 1.362-1.092 2.164-1.396.795-.306 1.675-.568 3.016-.634C8.416 2.176 8.796 2.163 12 2.163zm0-2.163C8.745 0 8.358.013 7.07 0c-1.485.074-2.529.385-3.418.736-1.745.688-3.111 2.054-3.8 3.799C.385 5.54.074 6.584 0 8.07c-.013 1.288-.026 1.675-.026 4.851s.013 3.563.026 4.851c.074 1.485.385 2.529.736 3.418.688 1.745 2.054 3.111 3.799 3.8.889.351 1.933.662 3.418.736 1.288.013 1.675.026 4.851.026s3.563-.013 4.851-.026c1.485-.074 2.529-.385 3.418-.736 1.745-.688 2.054-3.111 3.8-3.799.351-.889.662-1.933.736-3.418.013-1.288.026-1.675.026-4.851s-.013-3.563-.026-4.851c-.074-1.485-.385-2.529-.736-3.418-.688-1.745-2.054-3.111-3.799-3.8-.889-.351-1.933-.662-3.418-.736C15.637 0 15.25 0 12 0zm0 4.755c3.559 0 6.445 2.886 6.445 6.445s-2.886 6.445-6.445 6.445-6.445-2.886-6.445-6.445 2.886-6.445 6.445-6.445zm0 2.163c-2.36 0-4.282 1.922-4.282 4.282s1.922 4.282 4.282 4.282 4.282-1.922 4.282-4.282-1.922-4.282-4.282-4.282z"/></svg>
+                        @dalaerodesign (Instagram)
+                    </a>
+                </div>
+
+                <!-- Location & Affiliation (SAE Logo Removed) -->
+                <div>
+                    <h4 class="text-xl font-bold text-dal-yellow mb-4">Location & Affiliation</h4>
+                    <p class="text-gray-400">Dalhousie University, NS, Canada</p>
+                    <p class="text-gray-400 mt-2">Faculty Advisor: Colin O'Flynn</p>
+                    <p class="text-gray-400"><a href="mailto:coflynn@dal.ca" class="hover:text-white">coflynn@dal.ca</a></p>
+                    <!-- Removed SAE International logo placeholder -->
+                </div>
+
+            </div>
+
+            <!-- Back to Top link moved here for better centering -->
+            <div class="text-center mt-8">
+                <a href="#home" class="inline-block text-dal-yellow hover:text-white transition duration-300 font-semibold">
+                    Back to Top &uarr;
+                </a>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
+                &copy; 2025 Dalhousie Aero Design Team. All Rights Reserved.
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
