@@ -9,7 +9,7 @@
     <style>
         /* Custom styles based on your logo colors */
         :root {
-            --dal-blue: #0033A0; /* Royal Blue */
+            --dal-blue: black; /* Royal Blue */
             --dal-yellow: #FFC72A; /* Bright Yellow */
             --dal-black: #1A1A1A;
         }
@@ -26,14 +26,13 @@
             color: var(--dal-black);
         }
 
-        /* Hero text shadow for better visibility on images */
+    /* Hero text shadow for better visibility on images */
         .hero-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         
-        /* Custom image placeholder for the logo */
+        /* Logo placeholder using uploaded image */
         .logo-placeholder {
-            /* Using the filename provided by the user for the logo */
             content: url('uploaded:LogoExport12.png-a4ec5f97-0529-48e3-9133-c7a488164f7f');
             max-width: 100px;
             height: auto;
@@ -51,7 +50,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'dal-blue': '#0033A0',
+                        'dal-blue': '#black',
                         'dal-yellow': '#FFC72A',
                         'dal-black': '#1A1A1A',
                     }
@@ -60,12 +59,12 @@
         }
     </script>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation bar -->
     <header class="bg-dal-blue text-white shadow-lg fixed w-full z-10">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <!-- LOGO IN NAV BAR -->
-                <img src="./dal aero logo.png" alt="Dal Aero Design Logo" class="h-8 w-8 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/40x40/0033A0/FFC72A?text=DAL+AERO';" />
+                <!-- Navbar logo -->
+                <img src="./new_logo.jpg" alt="Dal Aero Design Logo" class="h-8 w-8 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/40x40/0033A0/FFC72A?text=DAL+AERO';" />
                 <span class="text-xl font-bold tracking-tight">DALHOUSIE AERO DESIGN</span>
             </div>
             <div class="hidden md:flex space-x-6 font-semibold">
@@ -73,23 +72,25 @@
                 <a href="#join" class="hover:text-dal-yellow transition duration-300">Join Us</a>
                 <a href="#sponsors" class="hover:text-dal-yellow transition duration-300">Sponsor</a>
                 <a href="#contact" class="hover:text-dal-yellow transition duration-300">Connect</a>
+                <a href - "./design.html" class="hover:text-dal-yellow transition duration-300">Design</a>
             </div>
-            <!-- Mobile Menu Button (Omitted for simplicity, but good practice for a real site) -->
+            <!-- Mobile menu button placeholder -->
         </nav>
     </header>
 
     <main class="pt-16">
         
-        <!-- 1. Hero Section - Updated with new slogan and prominent Dal Blue background -->
+    <!-- 1. Hero section — Dal Blue background and slogan -->
         <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-dal-blue">
             
             <div class="relative z-10 p-8 max-w-4xl mx-auto">
                 
-                <!-- LOGO DISPLAYED PROMINENTLY IN HERO SECTION (The area you selected) -->
-                <img src="./LogoExport12.png" alt="Dal Aero Design Logo" class="h-40 w-40 mx-auto mb-6 rounded-full shadow-2xl" onerror="this.onerror=null; this.src='https://placehold.co/160x160/0033A0/FFC72A?text=DAL+AERO';" />
+                <!-- Hero logo image -->
+                <!-- Responsive size breakpoints (base -> sm -> md -> lg -> xl) -->
+                <img src="./new_logo.jpg" alt="Dal Aero Design Logo" class="h-56 w-56 sm:h-80 sm:w-80 md:h-96 md:w-96 lg:h-[36rem] lg:w-[36rem] xl:h-[40rem] xl:w-[40rem] mx-auto mb-6 rounded-full shadow-2xl" onerror="this.onerror=null; this.src='https://placehold.co/160x160/0033A0/FFC72A?text=DAL+AERO';" />
 
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white hero-shadow tracking-tight uppercase">
-                    FROM BLUEPRINT TO RUNWAY
+                    DESIGN . BUILD . FLY
                 </h1>
                 <p class="mt-4 text-2xl sm:text-3xl text-dal-yellow font-light hero-shadow">
                     STUDENT-BUILT AIRCRAFT
@@ -108,7 +109,7 @@
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-extrabold text-dal-blue border-b-4 border-dal-yellow inline-block pb-1">
-                        Our Mission: SAE Aero Design 2027
+                        <a target="_blank" href="https://www.saeaerodesign.com/">Our Mission: SAE Aero Design 2027</a>
                     </h2>
                     <p class="mt-4 text-lg text-gray-600">
                         We are a student-run team from Dalhousie University, NS, Canada.
@@ -200,7 +201,8 @@
                 </div>
 
                 <div class="text-center mt-12">
-                    <a href="mailto:contact@dalahouiseaero.ca" class="inline-block bg-dal-yellow text-dal-blue font-bold py-4 px-10 rounded-full text-xl shadow-2xl hover:bg-white transition duration-300 transform hover:scale-105">
+                    <a href="mailto:aerodesign@dal.ca
+                    " class="inline-block bg-dal-yellow text-dal-blue font-bold py-4 px-10 rounded-full text-xl shadow-2xl hover:bg-white transition duration-300 transform hover:scale-105">
                         <svg class="w-6 h-6 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         Apply Today
                     </a>
@@ -224,10 +226,10 @@
                     "Sponsorship is your chance to be associated with the current & future successes of Dalhousie University at an International level. The skies await!"
                 </blockquote>
 
-                <!-- Budget Breakdown and Sponsorship Tiers (Based on image_f92cc5.jpg) -->
+                <!-- Budget breakdown and sponsorship tiers -->
                 <div class="grid lg:grid-cols-2 gap-10">
                     
-                    <!-- Budget Breakdown (Simplified Text) -->
+                    <!-- Budget breakdown -->
                     <div class="p-6 bg-white rounded-xl shadow-2xl border-t-8 border-dal-yellow">
                         <h3 class="text-2xl font-bold text-dal-black mb-4">Where Your Money Goes</h3>
                         <ul class="space-y-3 text-lg text-gray-700">
@@ -292,20 +294,19 @@
 
         <!-- 5. Contact / Footer -->
         <footer id="contact" class="bg-dal-black text-white py-12">
-            <!-- Changed grid to md:grid-cols-2 and removed the social media column -->
+            <!-- Footer layout with md:grid-cols-2 -->
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 text-center md:text-left">
                 
-                <!-- Contact Info (Now includes Instagram) -->
+                <!-- Contact info with Instagram link -->
                 <div>
                     <h4 class="text-xl font-bold text-dal-yellow mb-4">Get In Touch</h4>
-                    <p class="text-gray-400">Email (General): <a href="mailto:contact@dalahouiseaero.ca" class="hover:text-white">contact@dalahouiseaero.ca</a></p>
-                    <p class="text-gray-400">Email (Sponsorship): <a href="mailto:sponsorship@dalahouiseaero.ca" class="hover:text-white">sponsorship@dalahouiseaero.ca</a></p>
+                    <p class="text-gray-400">Email : <a href="mailto:aerodesign@dal.ca" class="hover:text-white">aerodesign@dal.ca</a></p>
                     
                     <h5 class="text-lg font-bold text-dal-yellow mt-4 mb-2">Student Executives</h5>
                     <p class="text-gray-400">Mithil Jha (Co-manager): <a href="mailto:mithil.jha@dal.ca" class="hover:text-white">mithil.jha@dal.ca</a></p>
                     <p class="text-gray-400">Zachary Fraser (Co-manager): <a href="mailto:zach.fraser@dal.ca" class="hover:text-white">zach.fraser@dal.ca</a></p>
 
-                    <!-- New Instagram Link -->
+                    <!-- Instagram link -->
                     <h5 class="text-lg font-bold text-dal-yellow mt-4 mb-2">Follow Us</h5>
                     <a href="https://www.instagram.com/dalaerodesign/" target="_blank" class="inline-flex items-center text-gray-400 hover:text-white transition duration-300">
                         <!-- Instagram icon using inline SVG for cleanliness -->
@@ -314,7 +315,7 @@
                     </a>
                 </div>
 
-                <!-- Location & Affiliation (SAE Logo Removed) -->
+                <!-- Location & Affiliation -->
                 <div>
                     <h4 class="text-xl font-bold text-dal-yellow mb-4">Location & Affiliation</h4>
                     <p class="text-gray-400">Dalhousie University, NS, Canada</p>
@@ -325,7 +326,7 @@
 
             </div>
 
-            <!-- Back to Top link moved here for better centering -->
+            <!-- Back to Top link -->
             <div class="text-center mt-8">
                 <a href="#home" class="inline-block text-dal-yellow hover:text-white transition duration-300 font-semibold">
                     Back to Top &uarr;
