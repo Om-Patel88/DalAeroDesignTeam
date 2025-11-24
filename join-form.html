@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Dalhousie Aero Design Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --dal-blue: black;
+            --dal-yellow: #FFC72A;
+            --dal-black: #1A1A1A;
+        }
+
+        .bg-dal-blue {
+            background-color: var(--dal-blue);
+        }
+
+        .text-dal-blue {
+            color: var(--dal-blue);
+        }
+
+        .bg-dal-yellow {
+            background-color: var(--dal-yellow);
+        }
+
+        .text-dal-yellow {
+            color: var(--dal-yellow);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: var(--dal-black);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dal-blue': 'black',
+                        'dal-yellow': '#FFC72A',
+                        'dal-black': '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Navigation bar -->
+    <header class="bg-dal-blue text-white shadow-lg fixed w-full z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="./new_logo.jpg" alt="Dal Aero Design Logo" class="h-8 w-8 rounded-full"
+                        onerror="this.onerror=null; this.src='https://placehold.co/40x40/0033A0/FFC72A?text=DAL+AERO';" />
+                    <span class="text-xl font-bold tracking-tight">DALHOUSIE AERO DESIGN</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-6 font-semibold">
+                <a href="index.html#mission" class="hover:text-dal-yellow transition duration-300">Mission</a>
+                <a href="index.html#join" class="hover:text-dal-yellow transition duration-300">Join Us</a>
+                <a href="index.html#sponsors" class="hover:text-dal-yellow transition duration-300">Sponsor</a>
+                <a href="index.html#contact" class="hover:text-dal-yellow transition duration-300">Connect</a>
+                <a href="./design.html" class="hover:text-dal-yellow transition duration-300">Design</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 pb-12 px-4 max-w-3xl mx-auto">
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-dal-yellow">
+            <h1 class="text-3xl font-bold text-dal-blue mb-6 text-center">Join The Team</h1>
+
+            <form id="join-form" action="https://formspree.io/f/xjkdwlzj" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-dal-yellow focus:ring-dal-yellow sm:text-sm p-3 border">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Dalhousie Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-dal-yellow focus:ring-dal-yellow sm:text-sm p-3 border">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="major" class="block text-sm font-medium text-gray-700">Major / Program</label>
+                        <input type="text" id="major" name="major" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-dal-yellow focus:ring-dal-yellow sm:text-sm p-3 border">
+                    </div>
+                    <div>
+                        <label for="year" class="block text-sm font-medium text-gray-700">Year of Study</label>
+                        <select id="year" name="year"
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-dal-yellow focus:ring-dal-yellow sm:text-sm p-3 border">
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                            <option value="5+">5th Year+</option>
+                            <option value="grad">Graduate Student</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="interest" class="block text-sm font-medium text-gray-700">Area of Interest</label>
+                    <select id="interest" name="interest"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-dal-yellow focus:ring-dal-yellow sm:text-sm p-3 border">
+                        <option value="design">Design (Aerodynamics, Structures)</option>
+                        <option value="build">Build (Manufacturing, Composites)</option>
+                        <option value="electronics">Electronics & Software</option>
+                        <option value="business">Business (Finance, Marketing, Sponsorship)</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="why-join" class="block text-sm font-medium text-gray-700">Why do you want to join the
+                        team?</label>
+                    <textarea id="why-join" name="why-join" rows="4" required
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-dal-yellow focus:ring-dal-yellow sm:text-sm p-3 border"></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" id="submit-btn"
+                        class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-sm font-medium rounded-full text-dal-blue bg-dal-yellow hover:bg-white hover:text-dal-blue border-dal-yellow transition duration-300">
+                        Submit Application
+                    </button>
+                </div>
+                <p id="form-status" class="text-center mt-4 hidden"></p>
+            </form>
+
+            <script>
+                var form = document.getElementById("join-form");
+
+                async function handleSubmit(event) {
+                    event.preventDefault();
+                    var status = document.getElementById("form-status");
+                    var btn = document.getElementById("submit-btn");
+                    var data = new FormData(event.target);
+
+                    btn.disabled = true;
+                    btn.textContent = "Submitting...";
+
+                    fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            status.innerHTML = "Thanks for your submission! We'll be in touch soon.";
+                            status.className = "text-center mt-4 text-green-600 font-semibold";
+                            status.classList.remove("hidden");
+                            form.reset();
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                                } else {
+                                    status.innerHTML = "Oops! There was a problem submitting your form";
+                                }
+                                status.className = "text-center mt-4 text-red-600 font-semibold";
+                                status.classList.remove("hidden");
+                            })
+                        }
+                    }).catch(error => {
+                        status.innerHTML = "Oops! There was a problem submitting your form";
+                        status.className = "text-center mt-4 text-red-600 font-semibold";
+                        status.classList.remove("hidden");
+                    }).finally(() => {
+                        btn.disabled = false;
+                        btn.textContent = "Submit Application";
+                    });
+                }
+                form.addEventListener("submit", handleSubmit)
+            </script>
+        </div>
+        <div class="mt-8 text-center">
+            <a href="index.html" class="text-dal-blue hover:text-dal-yellow font-semibold">&larr; Back to Home</a>
+        </div>
+    </main>
+</body>
+
+</html>

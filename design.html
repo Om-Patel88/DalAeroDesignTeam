@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design - Dalhousie Aero Design Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --dal-blue: black;
+            --dal-yellow: #FFC72A;
+            --dal-black: #1A1A1A;
+        }
+
+        .bg-dal-blue {
+            background-color: var(--dal-blue);
+        }
+
+        .text-dal-blue {
+            color: var(--dal-blue);
+        }
+
+        .bg-dal-yellow {
+            background-color: var(--dal-yellow);
+        }
+
+        .text-dal-yellow {
+            color: var(--dal-yellow);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: var(--dal-black);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dal-blue': 'black',
+                        'dal-yellow': '#FFC72A',
+                        'dal-black': '#1A1A1A',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Navigation bar -->
+    <header class="bg-dal-blue text-white shadow-lg fixed w-full z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="./new_logo.jpg" alt="Dal Aero Design Logo" class="h-8 w-8 rounded-full"
+                        onerror="this.onerror=null; this.src='https://placehold.co/40x40/0033A0/FFC72A?text=DAL+AERO';" />
+                    <span class="text-xl font-bold tracking-tight">DALHOUSIE AERO DESIGN</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-6 font-semibold">
+                <a href="index.html#mission" class="hover:text-dal-yellow transition duration-300">Mission</a>
+                <a href="index.html#join" class="hover:text-dal-yellow transition duration-300">Join Us</a>
+                <a href="index.html#sponsors" class="hover:text-dal-yellow transition duration-300">Sponsor</a>
+                <a href="index.html#contact" class="hover:text-dal-yellow transition duration-300">Connect</a>
+                <a href="./design.html" class="text-dal-yellow transition duration-300">Design</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 pb-12 px-4 max-w-7xl mx-auto">
+        <h1 class="text-4xl font-bold text-dal-blue mb-6">Design Philosophy</h1>
+        <p class="text-lg text-gray-700">
+            This page is currently under construction. Check back soon for updates on our aircraft design process!
+        </p>
+        <div class="mt-8">
+            <a href="index.html" class="text-dal-blue hover:text-dal-yellow font-semibold">&larr; Back to Home</a>
+        </div>
+    </main>
+</body>
+
+</html>

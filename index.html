@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,28 @@
     <style>
         /* Custom styles based on your logo colors */
         :root {
-            --dal-blue: black; /* Royal Blue */
-            --dal-yellow: #FFC72A; /* Bright Yellow */
+            --dal-blue: black;
+            /* Royal Blue */
+            --dal-yellow: #FFC72A;
+            /* Bright Yellow */
             --dal-black: #1A1A1A;
         }
 
-        .bg-dal-blue { background-color: var(--dal-blue); }
-        .text-dal-blue { color: var(--dal-blue); }
-        .bg-dal-yellow { background-color: var(--dal-yellow); }
-        .text-dal-yellow { color: var(--dal-yellow); }
+        .bg-dal-blue {
+            background-color: var(--dal-blue);
+        }
+
+        .text-dal-blue {
+            color: var(--dal-blue);
+        }
+
+        .bg-dal-yellow {
+            background-color: var(--dal-yellow);
+        }
+
+        .text-dal-yellow {
+            color: var(--dal-yellow);
+        }
 
         /* Use Inter font globally */
         body {
@@ -26,11 +40,11 @@
             color: var(--dal-black);
         }
 
-    /* Hero text shadow for better visibility on images */
+        /* Hero text shadow for better visibility on images */
         .hero-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-        
+
         /* Logo placeholder using uploaded image */
         .logo-placeholder {
             content: url('uploaded:LogoExport12.png-a4ec5f97-0529-48e3-9133-c7a488164f7f');
@@ -42,15 +56,40 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1A1A1A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #FFC72A;
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFD966;
+        }
+
+        /* Firefox scrollbar */
+        * {
+            scrollbar-color: #FFC72A #1A1A1A;
+            scrollbar-width: thin;
+        }
     </style>
 </head>
+
 <body>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'dal-blue': '#black',
+                        'dal-blue': 'black',
                         'dal-yellow': '#FFC72A',
                         'dal-black': '#1A1A1A',
                     }
@@ -64,7 +103,8 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <!-- Navbar logo -->
-                <img src="./new_logo.jpg" alt="Dal Aero Design Logo" class="h-8 w-8 rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/40x40/0033A0/FFC72A?text=DAL+AERO';" />
+                <img src="./new_logo.jpg" alt="Dal Aero Design Logo" class="h-8 w-8 rounded-full"
+                    onerror="this.onerror=null; this.src='https://placehold.co/40x40/0033A0/FFC72A?text=DAL+AERO';" />
                 <span class="text-xl font-bold tracking-tight">DALHOUSIE AERO DESIGN</span>
             </div>
             <div class="hidden md:flex space-x-6 font-semibold">
@@ -72,24 +112,44 @@
                 <a href="#join" class="hover:text-dal-yellow transition duration-300">Join Us</a>
                 <a href="#sponsors" class="hover:text-dal-yellow transition duration-300">Sponsor</a>
                 <a href="#contact" class="hover:text-dal-yellow transition duration-300">Connect</a>
-                <a href - "./design.html" class="hover:text-dal-yellow transition duration-300">Design</a>
+                <a href="./design.html" class="hover:text-dal-yellow transition duration-300">Design</a>
             </div>
-            <!-- Mobile menu button placeholder -->
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-white hover:text-dal-yellow focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dal-blue border-t border-blue-800">
+            <a href="#mission" class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Mission</a>
+            <a href="#join" class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Join Us</a>
+            <a href="#sponsors" class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Sponsor</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Connect</a>
+            <a href="./design.html" class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Design</a>
+        </div>
     </header>
 
     <main class="pt-16">
-        
-    <!-- 1. Hero section — Dal Blue background and slogan -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-dal-blue">
-            
+
+        <!-- 1. Hero section — Dal Blue background and slogan -->
+        <section id="home"
+            class="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-dal-blue">
+
             <div class="relative z-10 p-8 max-w-4xl mx-auto">
-                
+
                 <!-- Hero logo image -->
                 <!-- Responsive size breakpoints (base -> sm -> md -> lg -> xl) -->
-                <img src="./new_logo.jpg" alt="Dal Aero Design Logo" class="h-56 w-56 sm:h-80 sm:w-80 md:h-96 md:w-96 lg:h-[36rem] lg:w-[36rem] xl:h-[40rem] xl:w-[40rem] mx-auto mb-6 rounded-full shadow-2xl" onerror="this.onerror=null; this.src='https://placehold.co/160x160/0033A0/FFC72A?text=DAL+AERO';" />
+                <img src="./new_logo.jpg" alt="Dal Aero Design Logo"
+                    class="h-56 w-56 sm:h-80 sm:w-80 md:h-96 md:w-96 lg:h-[36rem] lg:w-[36rem] xl:h-[40rem] xl:w-[40rem] mx-auto mb-6 rounded-full shadow-2xl"
+                    onerror="this.onerror=null; this.src='https://placehold.co/160x160/0033A0/FFC72A?text=DAL+AERO';" />
 
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white hero-shadow tracking-tight uppercase">
+                <h1
+                    class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white hero-shadow tracking-tight uppercase">
                     DESIGN . BUILD . FLY
                 </h1>
                 <p class="mt-4 text-2xl sm:text-3xl text-dal-yellow font-light hero-shadow">
@@ -98,7 +158,8 @@
                 <p class="mt-2 text-xl text-white font-semibold">
                     Dalhousie Aero Design Team | Engineering Tomorrow's Flight
                 </p>
-                <a href="#join" class="mt-10 inline-block bg-dal-yellow text-dal-blue font-bold py-3 px-8 rounded-full text-lg shadow-2xl hover:bg-white transition duration-300 transform hover:scale-105 uppercase tracking-wider">
+                <a href="join-form.html"
+                    class="mt-10 inline-block bg-dal-yellow text-dal-blue font-bold py-3 px-8 rounded-full text-lg shadow-2xl hover:bg-white transition duration-300 transform hover:scale-105 uppercase tracking-wider">
                     JOIN THE TEAM
                 </a>
             </div>
@@ -120,38 +181,46 @@
                     <div>
                         <h3 class="text-2xl font-bold text-dal-black mb-4">What We Do</h3>
                         <p class="text-lg text-gray-700 leading-relaxed">
-                            Founded in Summer 2025, our goal is to create new opportunities in aerospace engineering and hands-on design innovation at Dalhousie. We are preparing to compete in the prestigious **SAE Aero Design Competition in 2027**.
+                            Founded in Summer 2025, our goal is to create new opportunities in aerospace engineering and
+                            hands-on design innovation at Dalhousie. We are preparing to compete in the prestigious
+                            **SAE Aero Design Competition in 2027**.
                         </p>
                         <ul class="mt-6 space-y-3 text-lg text-gray-700">
                             <li class="flex items-start">
-                                <span class="text-dal-yellow mr-3 text-2xl font-bold">&rarr;</span>
-                                <span class="font-semibold text-dal-blue">Design:</span> Conceiving the optimal aircraft structure and system.
+                                <span class="font-semibold text-dal-blue">Design:</span> Conceiving the optimal aircraft
+                                structure and system.
                             </li>
                             <li class="flex items-start">
-                                <span class="text-dal-yellow mr-3 text-2xl font-bold">&rarr;</span>
-                                <span class="font-semibold text-dal-blue">Build:</span> Fabricating a flight-ready, radio-controlled aircraft from scratch.
+                                <span class="font-semibold text-dal-blue">Build:</span> Fabricating a flight-ready,
+                                radio-controlled aircraft from scratch.
                             </li>
                             <li class="flex items-start">
-                                <span class="text-dal-yellow mr-3 text-2xl font-bold">&rarr;</span>
-                                <span class="font-semibold text-dal-blue">Test & Fly:</span> Validating performance against real-world mission requirements.
+                                <span class="font-semibold text-dal-blue">Test & Fly:</span> Validating performance
+                                against real-world mission requirements.
                             </li>
                         </ul>
                     </div>
-                    
+
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-dal-yellow">
                         <h3 class="text-2xl font-bold text-dal-black mb-4 flex items-center">
-                            <svg class="w-6 h-6 mr-2 text-dal-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <svg class="w-6 h-6 mr-2 text-dal-blue" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
                             The Challenge: Regular Class
                         </h3>
                         <p class="text-gray-700">
-                            We are focused on the Regular Class, which challenges us to develop a fundamental understanding of flight and structural efficiency.
+                            We are focused on the Regular Class, which challenges us to develop a fundamental
+                            understanding of flight and structural efficiency.
                         </p>
                         <p class="mt-3 font-semibold text-dal-blue">The primary objective is simple:</p>
                         <p class="text-2xl font-extrabold mt-1 text-dal-black">
                             Maximize Payload, Minimize Weight.
                         </p>
                         <p class="text-sm mt-3 text-gray-500">
-                            This experience prepares the next generation of engineers for careers in aerospace and beyond.
+                            This experience prepares the next generation of engineers for careers in aerospace and
+                            beyond.
                         </p>
                     </div>
                 </div>
@@ -171,7 +240,7 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-                    
+
                     <div class="p-6 bg-dal-black rounded-xl shadow-xl hover:shadow-dal-yellow transition duration-300">
                         <h3 class="text-xl font-bold text-dal-yellow mb-3">Gain Real-World Skills</h3>
                         <ul class="list-disc list-inside space-y-2 text-lg">
@@ -185,7 +254,9 @@
                     <div class="p-6 bg-dal-black rounded-xl shadow-xl hover:shadow-dal-yellow transition duration-300">
                         <h3 class="text-xl font-bold text-dal-yellow mb-3">Learn By Doing</h3>
                         <p class="text-lg">
-                            Move beyond the textbook. We offer hands-on experience in every step of the engineering process, from initial concept sketches to final flight testing. It's the best way to prepare for an industry career.
+                            Move beyond the textbook. We offer hands-on experience in every step of the engineering
+                            process, from initial concept sketches to final flight testing. It's the best way to prepare
+                            for an industry career.
                         </p>
                     </div>
 
@@ -201,9 +272,13 @@
                 </div>
 
                 <div class="text-center mt-12">
-                    <a href="mailto:aerodesign@dal.ca
-                    " class="inline-block bg-dal-yellow text-dal-blue font-bold py-4 px-10 rounded-full text-xl shadow-2xl hover:bg-white transition duration-300 transform hover:scale-105">
-                        <svg class="w-6 h-6 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    <a href="join-form.html"
+                        class="inline-block bg-dal-yellow text-dal-blue font-bold py-4 px-10 rounded-full text-xl shadow-2xl hover:bg-white transition duration-300 transform hover:scale-105">
+                        <svg class="w-6 h-6 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
                         Apply Today
                     </a>
                 </div>
@@ -218,25 +293,35 @@
                         Partner With Us
                     </h2>
                     <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-                        Your support is crucial for our success at the SAE Aero Design Competition. Help us reach our **$6000 budget** goal!
+                        Your support is crucial for our success at the SAE Aero Design Competition. Help us reach our
+                        **$6000 budget** goal!
                     </p>
                 </div>
 
-                <blockquote class="text-center italic text-xl text-gray-700 mb-10 p-4 border-l-4 border-dal-blue bg-white rounded-lg shadow-md max-w-3xl mx-auto">
-                    "Sponsorship is your chance to be associated with the current & future successes of Dalhousie University at an International level. The skies await!"
+                <blockquote
+                    class="text-center italic text-xl text-gray-700 mb-10 p-4 border-l-4 border-dal-blue bg-white rounded-lg shadow-md max-w-3xl mx-auto">
+                    "Sponsorship is your chance to be associated with the current & future successes of Dalhousie
+                    University at an International level. The skies await!"
                 </blockquote>
 
                 <!-- Budget breakdown and sponsorship tiers -->
                 <div class="grid lg:grid-cols-2 gap-10">
-                    
+
                     <!-- Budget breakdown -->
                     <div class="p-6 bg-white rounded-xl shadow-2xl border-t-8 border-dal-yellow">
                         <h3 class="text-2xl font-bold text-dal-black mb-4">Where Your Money Goes</h3>
                         <ul class="space-y-3 text-lg text-gray-700">
-                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">Flight Electronics</span><span class="font-bold text-dal-black">~27%</span></li>
-                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">SAE Fees & Registration</span><span class="font-bold text-dal-black">~43%</span></li>
-                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">Prototyping & Materials</span><span class="font-bold text-dal-black">~11%</span></li>
-                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">Advertising & Misc.</span><span class="font-bold text-dal-black">~19%</span></li>
+                            <li class="flex justify-between items-center"><span
+                                    class="font-semibold text-dal-blue">Flight Electronics</span><span
+                                    class="font-bold text-dal-black">~27%</span></li>
+                            <li class="flex justify-between items-center"><span class="font-semibold text-dal-blue">SAE
+                                    Fees & Registration</span><span class="font-bold text-dal-black">~43%</span></li>
+                            <li class="flex justify-between items-center"><span
+                                    class="font-semibold text-dal-blue">Prototyping & Materials</span><span
+                                    class="font-bold text-dal-black">~11%</span></li>
+                            <li class="flex justify-between items-center"><span
+                                    class="font-semibold text-dal-blue">Advertising & Misc.</span><span
+                                    class="font-bold text-dal-black">~19%</span></li>
                         </ul>
                         <p class="mt-4 text-sm text-gray-500">
                             Detailed breakdown is available in our Sponsor Package.
@@ -251,43 +336,73 @@
                                 <thead>
                                     <tr class="text-left text-sm font-medium uppercase tracking-wider">
                                         <th class="py-3 px-2">Exposure</th>
-                                        <th class="py-3 px-2 bg-dal-yellow text-dal-blue rounded-tl-lg">Platinum ($3000+)</th>
-                                        <th class="py-3 px-2 bg-blue-400 text-dal-black">First Class ($2000+)</th>
-                                        <th class="py-3 px-2 bg-gray-700 text-white rounded-tr-lg">Business ($1000+)</th>
+                                        <th class="py-3 px-2 bg-dal-yellow text-dal-blue rounded-tl-lg">Platinum
+                                            ($3000+)</th>
+                                        <th class="py-3 px-2 bg-gray-200 text-dal-blue">First Class ($2000+)</th>
+                                        <th class="py-3 px-2 bg-gray-700 text-white rounded-tr-lg">Business ($1000+)
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-800">
                                     <tr class="hover:bg-dal-black">
                                         <td class="py-2 px-2 font-semibold">Company logo on Vehicle</td>
                                         <td class="py-2 px-2 text-dal-yellow">&#10003;</td>
-                                        <td class="py-2 px-2 text-blue-400">&#10003;</td>
+                                        <td class="py-2 px-2 text-gray-600">&#10003;</td>
                                         <td class="py-2 px-2 text-gray-400">&#10003;</td>
                                     </tr>
                                     <tr class="hover:bg-dal-black">
                                         <td class="py-2 px-2 font-semibold">Team Website Mention</td>
                                         <td class="py-2 px-2 text-dal-yellow">&#10003;</td>
-                                        <td class="py-2 px-2 text-blue-400">&#10003;</td>
+                                        <td class="py-2 px-2 text-gray-600">&#10003;</td>
                                         <td class="py-2 px-2 text-gray-400">&#10003;</td>
                                     </tr>
                                     <tr class="hover:bg-dal-black">
                                         <td class="py-2 px-2 font-semibold">Logo on Team Apparel</td>
                                         <td class="py-2 px-2 text-dal-yellow">&#10003;</td>
-                                        <td class="py-2 px-2 text-blue-400">&#10003;</td>
+                                        <td class="py-2 px-2 text-gray-600">&#10003;</td>
                                         <td class="py-2 px-2 text-gray-400"></td>
                                     </tr>
                                     <tr class="hover:bg-dal-black">
                                         <td class="py-2 px-2 font-semibold">Team Banner Display</td>
                                         <td class="py-2 px-2 text-dal-yellow">&#10003;</td>
-                                        <td class="py-2 px-2 text-blue-400">&#10003;</td>
+                                        <td class="py-2 px-2 text-gray-600">&#10003;</td>
                                         <td class="py-2 px-2 text-gray-400"></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <a href="mailto:sponsorship@dalahouiseaero.ca" class="mt-6 block w-full text-center bg-dal-yellow text-dal-blue font-bold py-3 rounded-lg hover:bg-white transition duration-300">
+                        <a href="sponsor-form.html"
+                            class="mt-6 block w-full text-center bg-dal-yellow text-dal-blue font-bold py-3 rounded-lg hover:bg-white transition duration-300">
                             Request Sponsor Package
                         </a>
                     </div>
+                </div>
+
+                <!-- Sponsor Logos Placeholders -->
+                <div class="mt-16 text-center">
+                    <h3 class="text-2xl font-bold text-dal-black mb-8">Our Current Sponsors</h3>
+                    <div
+                        class="flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition duration-500">
+                        <!-- Placeholder 1 -->
+                        <div class="w-40 h-24 bg-gray-200 rounded-lg flex items-center justify-center shadow-sm">
+                            <span class="text-gray-400 font-bold">Sponsor 1</span>
+                        </div>
+                        <!-- Placeholder 2 -->
+                        <div class="w-40 h-24 bg-gray-200 rounded-lg flex items-center justify-center shadow-sm">
+                            <span class="text-gray-400 font-bold">Sponsor 2</span>
+                        </div>
+                        <!-- Placeholder 3 -->
+                        <div class="w-40 h-24 bg-gray-200 rounded-lg flex items-center justify-center shadow-sm">
+                            <span class="text-gray-400 font-bold">Sponsor 3</span>
+                        </div>
+                        <!-- Placeholder 4 -->
+                        <div class="w-40 h-24 bg-gray-200 rounded-lg flex items-center justify-center shadow-sm">
+                            <span class="text-gray-400 font-bold">Sponsor 4</span>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-gray-500">
+                        Join these industry leaders in supporting student innovation.
+                    </p>
                 </div>
             </div>
         </section>
@@ -296,21 +411,28 @@
         <footer id="contact" class="bg-dal-black text-white py-12">
             <!-- Footer layout with md:grid-cols-2 -->
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 text-center md:text-left">
-                
+
                 <!-- Contact info with Instagram link -->
                 <div>
                     <h4 class="text-xl font-bold text-dal-yellow mb-4">Get In Touch</h4>
-                    <p class="text-gray-400">Email : <a href="mailto:aerodesign@dal.ca" class="hover:text-white">aerodesign@dal.ca</a></p>
-                    
+                    <p class="text-gray-400">Email : <a href="mailto:aerodesign@dal.ca"
+                            class="hover:text-white">aerodesign@dal.ca</a></p>
+
                     <h5 class="text-lg font-bold text-dal-yellow mt-4 mb-2">Student Executives</h5>
-                    <p class="text-gray-400">Mithil Jha (Co-manager): <a href="mailto:mithil.jha@dal.ca" class="hover:text-white">mithil.jha@dal.ca</a></p>
-                    <p class="text-gray-400">Zachary Fraser (Co-manager): <a href="mailto:zach.fraser@dal.ca" class="hover:text-white">zach.fraser@dal.ca</a></p>
+                    <p class="text-gray-400">Mithil Jha (Co-manager): <a href="mailto:mithil.jha@dal.ca"
+                            class="hover:text-white">mithil.jha@dal.ca</a></p>
+                    <p class="text-gray-400">Zachary Fraser (Co-manager): <a href="mailto:zach.fraser@dal.ca"
+                            class="hover:text-white">zach.fraser@dal.ca</a></p>
 
                     <!-- Instagram link -->
                     <h5 class="text-lg font-bold text-dal-yellow mt-4 mb-2">Follow Us</h5>
-                    <a href="https://www.instagram.com/dalaerodesign/" target="_blank" class="inline-flex items-center text-gray-400 hover:text-white transition duration-300">
+                    <a href="https://www.instagram.com/dalaerodesign/" target="_blank"
+                        class="inline-flex items-center text-gray-400 hover:text-white transition duration-300">
                         <!-- Instagram icon using inline SVG for cleanliness -->
-                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.013 4.851.074 1.341.066 2.221.328 3.016.634.804.305 1.488.718 2.164 1.396.678.678 1.092 1.362 1.396 2.164.306.795.568 1.675.634 3.016.061 1.267.074 1.647.074 4.851s-.013 3.584-.074 4.851c-.066 1.341-.328 2.221-.634 3.016-.305.804-.718 1.488-1.396 2.164-.678.678-1.362 1.092-2.164 1.396-.795.306-1.675.568-3.016.634-1.267.061-1.647.074-4.851.074s-3.584-.013-4.851-.074c-1.341-.066-2.221-.328-3.016-.634-.804-.305-1.488-.718-2.164-1.396-.678-.678-1.362-1.092-1.396-2.164-.306-.795-.568-1.675-.634-3.016-.061-1.267-.074-1.647-.074-4.851s.013-3.563.074-4.851c.066-1.341.328-2.221.634-3.016.305-.804.718-1.488 1.396-2.164.678-.678 1.362-1.092 2.164-1.396.795-.306 1.675-.568 3.016-.634C8.416 2.176 8.796 2.163 12 2.163zm0-2.163C8.745 0 8.358.013 7.07 0c-1.485.074-2.529.385-3.418.736-1.745.688-3.111 2.054-3.8 3.799C.385 5.54.074 6.584 0 8.07c-.013 1.288-.026 1.675-.026 4.851s.013 3.563.026 4.851c.074 1.485.385 2.529.736 3.418.688 1.745 2.054 3.111 3.799 3.8.889.351 1.933.662 3.418.736 1.288.013 1.675.026 4.851.026s3.563-.013 4.851-.026c1.485-.074 2.529-.385 3.418-.736 1.745-.688 2.054-3.111 3.8-3.799.351-.889.662-1.933.736-3.418.013-1.288.026-1.675.026-4.851s-.013-3.563-.026-4.851c-.074-1.485-.385-2.529-.736-3.418-.688-1.745-2.054-3.111-3.799-3.8-.889-.351-1.933-.662-3.418-.736C15.637 0 15.25 0 12 0zm0 4.755c3.559 0 6.445 2.886 6.445 6.445s-2.886 6.445-6.445 6.445-6.445-2.886-6.445-6.445 2.886-6.445 6.445-6.445zm0 2.163c-2.36 0-4.282 1.922-4.282 4.282s1.922 4.282 4.282 4.282 4.282-1.922 4.282-4.282-1.922-4.282-4.282-4.282z"/></svg>
+                        <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.013 4.851.074 1.341.066 2.221.328 3.016.634.804.305 1.488.718 2.164 1.396.678.678 1.092 1.362 1.396 2.164.306.795.568 1.675.634 3.016.061 1.267.074 1.647.074 4.851s-.013 3.584-.074 4.851c-.066 1.341-.328 2.221-.634 3.016-.305.804-.718 1.488-1.396 2.164-.678.678-1.362 1.092-2.164 1.396-.795.306-1.675.568-3.016.634-1.267.061-1.647.074-4.851.074s-3.584-.013-4.851-.074c-1.341-.066-2.221-.328-3.016-.634-.804-.305-1.488-.718-2.164-1.396-.678-.678-1.362-1.092-1.396-2.164-.306-.795-.568-1.675-.634-3.016-.061-1.267-.074-1.647-.074-4.851s.013-3.563.074-4.851c.066-1.341.328-2.221.634-3.016.305-.804.718-1.488 1.396-2.164.678-.678 1.362-1.092 2.164-1.396.795-.306 1.675-.568 3.016-.634C8.416 2.176 8.796 2.163 12 2.163zm0-2.163C8.745 0 8.358.013 7.07 0c-1.485.074-2.529.385-3.418.736-1.745.688-3.111 2.054-3.8 3.799C.385 5.54.074 6.584 0 8.07c-.013 1.288-.026 1.675-.026 4.851s.013 3.563.026 4.851c.074 1.485.385 2.529.736 3.418.688 1.745 2.054 3.111 3.799 3.8.889.351 1.933.662 3.418.736 1.288.013 1.675.026 4.851.026s3.563-.013 4.851-.026c1.485-.074 2.529-.385 3.418-.736 1.745-.688 2.054-3.111 3.8-3.799.351-.889.662-1.933.736-3.418.013-1.288.026-1.675.026-4.851s-.013-3.563-.026-4.851c-.074-1.485-.385-2.529-.736-3.418-.688-1.745-2.054-3.111-3.799-3.8-.889-.351-1.933-.662-3.418-.736C15.637 0 15.25 0 12 0zm0 4.755c3.559 0 6.445 2.886 6.445 6.445s-2.886 6.445-6.445 6.445-6.445-2.886-6.445-6.445 2.886-6.445 6.445-6.445zm0 2.163c-2.36 0-4.282 1.922-4.282 4.282s1.922 4.282 4.282 4.282 4.282-1.922 4.282-4.282-1.922-4.282-4.282-4.282z" />
+                        </svg>
                         @dalaerodesign (Instagram)
                     </a>
                 </div>
@@ -320,7 +442,8 @@
                     <h4 class="text-xl font-bold text-dal-yellow mb-4">Location & Affiliation</h4>
                     <p class="text-gray-400">Dalhousie University, NS, Canada</p>
                     <p class="text-gray-400 mt-2">Faculty Advisor: Colin O'Flynn</p>
-                    <p class="text-gray-400"><a href="mailto:coflynn@dal.ca" class="hover:text-white">coflynn@dal.ca</a></p>
+                    <p class="text-gray-400"><a href="mailto:coflynn@dal.ca" class="hover:text-white">coflynn@dal.ca</a>
+                    </p>
                     <!-- Removed SAE International logo placeholder -->
                 </div>
 
@@ -328,7 +451,8 @@
 
             <!-- Back to Top link -->
             <div class="text-center mt-8">
-                <a href="#home" class="inline-block text-dal-yellow hover:text-white transition duration-300 font-semibold">
+                <a href="#home"
+                    class="inline-block text-dal-yellow hover:text-white transition duration-300 font-semibold">
                     Back to Top &uarr;
                 </a>
             </div>
@@ -339,5 +463,18 @@
         </footer>
 
     </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+
+    </script>
 </body>
+
 </html>
