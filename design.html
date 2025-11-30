@@ -1,27 +1,106 @@
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.bg-dal-blue {
-background-color: var(--dal-blue);
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Philosophy | Dalhousie Aero Design Team</title>
+    <meta name="description"
+        content="Learn about the design philosophy and aircraft design process of the Dalhousie Aero Design Team.">
+    <meta name="keywords" content="Dalhousie University, Aero Design, Engineering, Aircraft Design, Student Team">
+    <meta name="author" content="Dalhousie Aero Design Team">
 
-.text-dal-blue {
-color: var(--dal-blue);
-}
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dalaerodesign.com/design.html">
+    <meta property="og:title" content="Design Philosophy | Dalhousie Aero Design Team">
+    <meta property="og:description"
+        content="Learn about the design philosophy and aircraft design process of the Dalhousie Aero Design Team.">
+    <meta property="og:image" content="https://www.dalaerodesign.com/new_logo.jpg">
 
-.bg-dal-yellow {
-background-color: var(--dal-yellow);
-}
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.dalaerodesign.com/design.html">
+    <meta property="twitter:title" content="Design Philosophy | Dalhousie Aero Design Team">
+    <meta property="twitter:description"
+        content="Learn about the design philosophy and aircraft design process of the Dalhousie Aero Design Team.">
+    <meta property="twitter:image" content="https://www.dalaerodesign.com/new_logo.jpg">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles based on your logo colors */
+        :root {
+            --dal-blue: black;
+            /* Royal Blue */
+            --dal-yellow: #FFC72A;
+            /* Bright Yellow */
+            --dal-black: #1A1A1A;
+        }
 
-.text-dal-yellow {
-color: var(--dal-yellow);
-}
+        .bg-dal-blue {
+            background-color: var(--dal-blue);
+        }
 
-body {
-font-family: 'Inter', sans-serif;
-background-color: #f8f8f8;
-color: var(--dal-black);
-}
-</style>
+        .text-dal-blue {
+            color: var(--dal-blue);
+        }
+
+        .bg-dal-yellow {
+            background-color: var(--dal-yellow);
+        }
+
+        .text-dal-yellow {
+            color: var(--dal-yellow);
+        }
+
+        /* Use Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: var(--dal-black);
+        }
+
+        /* Hero text shadow for better visibility on images */
+        .hero-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Logo placeholder using uploaded image */
+        .logo-placeholder {
+            content: url('uploaded:LogoExport12.png-a4ec5f97-0529-48e3-9133-c7a488164f7f');
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Smooth scroll for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1A1A1A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #FFC72A;
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FFD966;
+        }
+
+        /* Firefox scrollbar */
+        * {
+            scrollbar-color: #FFC72A #1A1A1A;
+            scrollbar-width: thin;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,10 +117,12 @@ color: var(--dal-black);
             }
         }
     </script>
+
     <!-- Navigation bar -->
-    <header class="bg-dal-blue text-white shadow-lg fixed w-full z-10">
+    <header class="bg-dal-blue text-white shadow-lg fixed w-full z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
+                <!-- Navbar logo -->
                 <a href="index.html" class="flex items-center space-x-2">
                     <img src="./new_logo.jpg" alt="Dal Aero Design Logo" class="h-8 w-8 rounded-full"
                         onerror="this.onerror=null; this.src='https://placehold.co/40x40/0033A0/FFC72A?text=DAL+AERO';" />
@@ -55,10 +136,31 @@ color: var(--dal-black);
                 <a href="index.html#contact" class="hover:text-dal-yellow transition duration-300">Connect</a>
                 <a href="./design.html" class="text-dal-yellow transition duration-300">Design</a>
             </div>
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-white hover:text-dal-yellow focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dal-blue border-t border-blue-800">
+            <a href="index.html#mission"
+                class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Mission</a>
+            <a href="index.html#join" class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Join
+                Us</a>
+            <a href="index.html#sponsors"
+                class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Sponsor</a>
+            <a href="index.html#contact"
+                class="block py-2 px-4 text-sm hover:bg-blue-800 hover:text-dal-yellow">Connect</a>
+            <a href="./design.html" class="block py-2 px-4 text-sm bg-blue-900 text-dal-yellow">Design</a>
+        </div>
     </header>
 
-    <main class="pt-24 pb-12 px-4 max-w-7xl mx-auto">
+    <main class="pt-24 pb-12 px-4 max-w-7xl mx-auto min-h-screen">
         <h1 class="text-4xl font-bold text-dal-blue mb-6">Design Philosophy</h1>
         <p class="text-lg text-gray-700">
             This page is currently under construction. Check back soon for updates on our aircraft design process!
@@ -67,6 +169,69 @@ color: var(--dal-black);
             <a href="index.html" class="text-dal-blue hover:text-dal-yellow font-semibold">&larr; Back to Home</a>
         </div>
     </main>
+
+    <!-- Contact / Footer -->
+    <footer id="contact" class="bg-dal-black text-white py-12">
+        <!-- Footer layout with md:grid-cols-2 -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 text-center md:text-left">
+
+            <!-- Contact info with Instagram link -->
+            <div>
+                <h4 class="text-xl font-bold text-dal-yellow mb-4">Get In Touch</h4>
+                <p class="text-gray-400">Email : <a href="mailto:aerodesign@dal.ca"
+                        class="hover:text-white">aerodesign@dal.ca</a></p>
+
+                <h5 class="text-lg font-bold text-dal-yellow mt-4 mb-2">Student Executives</h5>
+                <p class="text-gray-400">Mithil Jha (Co-manager): <a href="mailto:mithil.jha@dal.ca"
+                        class="hover:text-white">mithil.jha@dal.ca</a></p>
+                <p class="text-gray-400">Zachary Fraser (Co-manager): <a href="mailto:zach.fraser@dal.ca"
+                        class="hover:text-white">zach.fraser@dal.ca</a></p>
+
+                <!-- Instagram link -->
+                <h5 class="text-lg font-bold text-dal-yellow mt-4 mb-2">Follow Us</h5>
+                <a href="https://www.instagram.com/dalaerodesign/" target="_blank"
+                    class="inline-flex items-center text-gray-400 hover:text-white transition duration-300">
+                    <!-- Instagram icon using inline SVG for cleanliness -->
+                    <svg class="w-6 h-6 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.013 4.851.074 1.341.066 2.221.328 3.016.634.804.305 1.488.718 2.164 1.396.678.678 1.092 1.362 1.396 2.164.306.795.568 1.675.634 3.016.061 1.267.074 1.647.074 4.851s-.013 3.584-.074 4.851c-.066 1.341-.328 2.221-.634 3.016-.305.804-.718 1.488-1.396 2.164-.678.678-1.362 1.092-2.164 1.396-.795.306-1.675.568-3.016.634-1.267.061-1.647.074-4.851.074s-3.584-.013-4.851-.074c-1.341-.066-2.221-.328-3.016-.634-.804-.305-1.488-.718-2.164-1.396-.678-.678-1.362-1.092-1.396-2.164-.306-.795-.568-1.675-.634-3.016-.061-1.267-.074-1.647-.074-4.851s.013-3.563.074-4.851c.066-1.341.328-2.221.634-3.016.305-.804.718-1.488 1.396-2.164.678-.678 1.362-1.092 2.164-1.396.795-.306 1.675-.568 3.016-.634C8.416 2.176 8.796 2.163 12 2.163zm0-2.163C8.745 0 8.358.013 7.07 0c-1.485.074-2.529.385-3.418.736-1.745.688-3.111 2.054-3.8 3.799C.385 5.54.074 6.584 0 8.07c-.013 1.288-.026 1.675-.026 4.851s.013 3.563.026 4.851c.074 1.485.385 2.529.736 3.418.688 1.745 2.054 3.111 3.799 3.8.889.351 1.933.662 3.418.736 1.288.013 1.675.026 4.851.026s3.563-.013 4.851-.026c1.485-.074 2.529-.385 3.418-.736 1.745-.688 2.054-3.111 3.8-3.799.351-.889.662-1.933.736-3.418.736C15.637 0 15.25 0 12 0zm0 4.755c3.559 0 6.445 2.886 6.445 6.445s-2.886 6.445-6.445 6.445-6.445-2.886-6.445-6.445 2.886-6.445 6.445-6.445zm0 2.163c-2.36 0-4.282 1.922-4.282 4.282s1.922 4.282 4.282 4.282 4.282-1.922 4.282-4.282-1.922-4.282-4.282-4.282z" />
+                    </svg>
+                    @dalaerodesign (Instagram)
+                </a>
+            </div>
+
+            <!-- Location & Affiliation -->
+            <div>
+                <h4 class="text-xl font-bold text-dal-yellow mb-4">Location & Affiliation</h4>
+                <p class="text-gray-400">Dalhousie University, NS, Canada</p>
+                <p class="text-gray-400 mt-2">Faculty Advisor: Colin O'Flynn</p>
+                <p class="text-gray-400"><a href="mailto:coflynn@dal.ca" class="hover:text-white">coflynn@dal.ca</a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Back to Top link -->
+        <div class="text-center mt-8">
+            <a href="#" class="inline-block text-dal-yellow hover:text-white transition duration-300 font-semibold">
+                Back to Top &uarr;
+            </a>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
+            &copy; 2025 Dalhousie Aero Design Team. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
